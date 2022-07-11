@@ -4,6 +4,10 @@ article{
   padding: 15px;
 }
 
+article:hover{
+  box-shadow: 10px 10px rgb(173, 173, 213);
+}
+
 .tweet-header{
   display: flex;
   align-items: center;
