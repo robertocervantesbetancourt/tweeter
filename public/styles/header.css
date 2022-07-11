@@ -1,0 +1,27 @@
+header{
+  background-color: #E8AC09;
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20%;
+  background-image: url(../images/diagonal-striped-brick.png) ;
+}
+
+.avatar-container{
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: 65%;
+}
+
+.user-name{
+  color: white;
+  margin-top: 0%;
+  font-weight: 200;
+}
+
