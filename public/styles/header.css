@@ -1,5 +1,5 @@
 .user-header{
-  background-color: #E8AC09;
+  background-color: #358530;
   height: 400px;
   width: 100%;
   display: flex;
@@ -15,8 +15,8 @@
   justify-content: center;
 }
 
-img{
-  width: 65%;
+.avatar-container img{
+  width: 35%;
 }
 
 .user-name{
