@@ -47,13 +47,11 @@ const loadTweets = function() {
 loadTweets();
 
 const charCounter = document.querySelector('.counter')
-console.log(counter.value)
 
 //Push new tweet from form submit
 const newTweet = document.querySelector('form')
 
 $(newTweet).submit(function(event){
-  console.log($(this).serialize())
   if($(this).serialize() === 'text=') {
     alert("Message can't be empty");
   } else if (document.querySelector('.counter').value < 0){
@@ -66,7 +64,8 @@ $(newTweet).submit(function(event){
     })
     .then(function(){
       document.querySelector('form').reset();
-      $(loadTweets()).replaceAll('article')
+      $(document.querySelector('output')).html('140');
+      $(loadTweets()).replaceAll('article');
     })
   }
   
