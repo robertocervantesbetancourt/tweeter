@@ -29,8 +29,10 @@ const tweetData = [
   }
 ]
 
+//Assign tweet timeline container to variable
 const card = document.querySelector('.tweets-timeline');
 
+//Function that creates a new tweet card
 const createTweetElement = function(tweet) {
   const $tweet = $(
   `<article>
@@ -51,12 +53,36 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+
+//Function that displays all the tweets
 const renderTweet = function(tweets) {
+  console.log(tweets)
   for(const tweet of tweets) {
     $(card).append(createTweetElement(tweet));
   }
 }
 
-renderTweet(tweetData)
+//This function loads all the tweets from /tweets db
+const loadTweets = function() {
+  $.get("/tweets", function(data){
+    renderTweet(data);
+  })
+}
 
+loadTweets();
+
+
+//Push new tweet from form submit
+const newTweet = document.querySelector('form')
+
+$(newTweet).submit(function(event){
+  $.ajax('/tweets', 
+  {
+    method: 'POST',
+    data: $(this).serialize()
+  })
+  // .done(loadTweets())
+  
+  event.preventDefault();
+})
 
