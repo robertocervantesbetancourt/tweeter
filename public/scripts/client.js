@@ -32,7 +32,7 @@ const createTweetElement = function(tweet) {
 
 //Function that displays all the tweets
 const renderTweet = function(tweets) {
-  for(const tweet of tweets) {
+  for(const tweet of tweets.reverse()) {
     $(card).append(createTweetElement(tweet));
   }
 }
@@ -66,6 +66,7 @@ $(newTweet).submit(function(event){
     })
     .then(function(){
       document.querySelector('form').reset();
+      $(loadTweets()).replaceAll('article')
     })
   }
   
