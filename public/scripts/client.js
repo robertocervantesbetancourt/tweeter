@@ -46,6 +46,8 @@ const loadTweets = function() {
 
 loadTweets();
 
+const charCounter = document.querySelector('.counter')
+console.log(counter.value)
 
 //Push new tweet from form submit
 const newTweet = document.querySelector('form')
@@ -54,11 +56,16 @@ $(newTweet).submit(function(event){
   console.log($(this).serialize())
   if($(this).serialize() === 'text=') {
     alert("Message can't be empty");
+  } else if (document.querySelector('.counter').value < 0){
+    alert ("Your message is too long, it should be 120 characters")
   } else {
     $.ajax('/tweets', 
     {
       method: 'POST',
       data: $(this).serialize()
+    })
+    .then(function(){
+      document.querySelector('form').reset();
     })
   }
   
