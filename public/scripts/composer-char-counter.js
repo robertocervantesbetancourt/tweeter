@@ -1,7 +1,3 @@
-$(document).ready(function() {
-  // --- our code goes here ---  
-});
-
 const form = document.querySelector("form");
 const textArea = form.querySelector("textarea");
 const counter = form.querySelector("output")
