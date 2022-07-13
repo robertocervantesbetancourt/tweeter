@@ -38,3 +38,9 @@ form{
   font-size: 18px;
   color: white;
 }
+
+#alert{
+  margin-top: 5px;
+  color: red;
+  font-size: 14px;;
+}

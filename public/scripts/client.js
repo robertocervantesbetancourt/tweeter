@@ -7,6 +7,12 @@
 
 //Assign tweet timeline container to variable
 const card = document.querySelector('.tweets-timeline');
+//Assign error message to a variable
+const errorMessage = document.querySelector('#alert');
+
+//Hide error message
+$(errorMessage).hide();
+
 
 //safe HTML
 const escape = function (str) {
@@ -59,9 +65,10 @@ const newTweet = document.querySelector('form')
 $(newTweet).submit(function(event){
   event.preventDefault();
   if($(this).serialize() === 'text=') {
-    alert("Message can't be empty");
+    $(errorMessage).append("<span>&nbspMessage can't be empty</span>").slideDown(200);
   } else if (document.querySelector('.counter').value < 0){
-    alert ("Your message is too long, it should be 120 characters")
+    //alert ("Your message is too long, it should be 120 characters")
+    $(errorMessage).append("<span>&nbspYour message is too long, it should be 120 characters</span>").slideDown(200);
   } else {
     const $message = $(this).serialize();
     $.ajax('/tweets', 
@@ -73,6 +80,7 @@ $(newTweet).submit(function(event){
       document.querySelector('form').reset();
       $(document.querySelector('output')).html('140');
       $(loadTweets()).replaceAll('article');
+      $(errorMessage).hide();
     })
   } 
 })
