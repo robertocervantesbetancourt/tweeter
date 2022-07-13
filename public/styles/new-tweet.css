@@ -42,5 +42,31 @@ form{
 #alert{
   margin-top: 5px;
   color: red;
-  font-size: 14px;;
+  font-size: 14px;
+}
+
+#write-new-tweet{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: fixed;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  color: white;
+  cursor: pointer;
+  background: rgba(232, 172, 10, 1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  font-family: "Bungee", sans-serif;
+
+}
+
+#write-new-tweet span{
+  padding-top: 15px;
+  color: purple;
+  text-align: center;
+
 }

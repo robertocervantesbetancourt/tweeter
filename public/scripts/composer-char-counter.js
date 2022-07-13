@@ -9,6 +9,8 @@ const counter = form.querySelector("output")
     $(counter).html(characters)
     if (characters < 0) {
       $(counter).css("color","red");
+    } else {
+      $(counter).css("color","black");
     };
   }));
 

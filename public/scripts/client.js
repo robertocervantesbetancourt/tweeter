@@ -68,7 +68,7 @@ $(newTweet).submit(function(event){
     $(errorMessage).append("<span>&nbspMessage can't be empty</span>").slideDown(200);
   } else if (document.querySelector('.counter').value < 0){
     //alert ("Your message is too long, it should be 120 characters")
-    $(errorMessage).append("<span>&nbspYour message is too long, it should be 120 characters</span>").slideDown(200);
+    $(errorMessage).append("<span>&nbspYour message is too long, it should be 140 characters</span>").slideDown(200);
   } else {
     const $message = $(this).serialize();
     $.ajax('/tweets', 
@@ -78,10 +78,59 @@ $(newTweet).submit(function(event){
     })
     .then(function(){
       document.querySelector('form').reset();
-      $(document.querySelector('output')).html('140');
+      $(document.querySelector('output')).text('140');
       $(loadTweets()).replaceAll('article');
       $(errorMessage).hide();
     })
   } 
 })
 
+
+//Animate arrow
+const loopAnimation = () => {
+$('#two-arrows-down').animate({
+    opacity: 0.25,
+
+  }, 700,  function() {
+
+    $('#two-arrows-down').animate({
+      opacity: 1,
+
+      }, 700,  function() {
+        loopAnimation();
+    })
+  });
+}
+
+loopAnimation()
+
+//Hide and show new tweet section when clicking on write new tweet
+const newTweetContainer = document.querySelector('.new-tweet');
+const displayNewTweetContainer = document.querySelector('#nav-right');
+
+//hide
+$(newTweetContainer).hide();
+
+//display and hide on click function
+  $(displayNewTweetContainer).on('click', function () {
+    $(newTweetContainer).toggle("slow", 'swing');
+  })
+
+
+//change nav bar color on scroll, display new tweet button on scroll
+const navbar = document.querySelector('nav');
+$(document.querySelector('#write-new-tweet')).hide();
+
+$(document).scroll(function(){
+  if($(this).scrollTop() > 139){
+    $(document.querySelector('nav')).css("background","rgba(232, 172, 10, 1)")
+    $(document.querySelector('#write-new-tweet')).show()
+    $(document.querySelector('#nav-right')).hide()
+  } else {
+    $(document.querySelector('nav')).css("background","rgba(232, 172, 10, 0)")
+    $(document.querySelector('#two-arrows-down')).css("color","rgba(232, 172, 10, 1)")
+    $(document.querySelector('#write-new-tweet')).hide()
+    $(document.querySelector('#nav-right')).show()
+  }
+
+})
