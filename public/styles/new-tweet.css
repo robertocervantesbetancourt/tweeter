@@ -56,7 +56,6 @@ form{
   bottom: 0;
   z-index: 99;
   color: white;
-  cursor: pointer;
   background: rgba(232, 172, 10, 1);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
@@ -68,5 +67,6 @@ form{
   padding-top: 15px;
   color: purple;
   text-align: center;
+  cursor: pointer;
 
 }

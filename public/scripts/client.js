@@ -132,5 +132,14 @@ $(document).scroll(function(){
     $(document.querySelector('#write-new-tweet')).hide()
     $(document.querySelector('#nav-right')).show()
   }
+})
+
+
+$(document.querySelector('#write-new-tweet span')).on('click', function() {
+  $(window).scrollTop(0);
+  if($(newTweetContainer).is(':visible')){
+  } else {
+    $(newTweetContainer).toggle("slow", 'swing');
+  }
 
 })
