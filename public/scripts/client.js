@@ -123,12 +123,12 @@ $(document.querySelector('#write-new-tweet')).hide();
 
 $(document).scroll(function(){
   if($(this).scrollTop() > 139){
-    $(document.querySelector('nav')).css("background","rgba(232, 172, 10, 1)")
+    $(document.querySelector('nav')).css("background","rgba(29, 54, 87, 1)")
     $(document.querySelector('#write-new-tweet')).show()
     $(document.querySelector('#nav-right')).hide()
   } else {
-    $(document.querySelector('nav')).css("background","rgba(232, 172, 10, 0)")
-    $(document.querySelector('#two-arrows-down')).css("color","rgba(232, 172, 10, 1)")
+    $(document.querySelector('nav')).css("background","rgba(29, 54, 87, 0)")
+    $(document.querySelector('#two-arrows-down')).css("color","rgba(230, 57, 70, 1)")
     $(document.querySelector('#write-new-tweet')).hide()
     $(document.querySelector('#nav-right')).show()
   }

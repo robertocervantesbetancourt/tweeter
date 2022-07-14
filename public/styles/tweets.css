@@ -6,7 +6,7 @@ article{
 }
 
 article:hover{
-  box-shadow: 10px 10px rgb(193, 213, 173);
+  box-shadow: 10px 10px #a8dadc;
 }
 
 .tweet-header{
@@ -24,7 +24,7 @@ article:hover{
 
 .user-handle{
   margin-left: auto;
-  color:rgb(173, 173, 213);
+  color:#457b9d;
 }
 
 .tweet-footer{
@@ -42,11 +42,11 @@ article:hover{
 }
 
 .tweet-footer i{
-  color: #358530;
+  color: #457b9d;
   margin-left: 3px;
   margin-right: 3px;
 }
 
 .tweet-footer i:hover{
-  color: #E8AC09;
+  color: #e63946;
 }
