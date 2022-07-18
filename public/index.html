@@ -31,6 +31,9 @@
     <!-- Timeago -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   
+    <!-- media -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
   </head>
 
   <body>
@@ -44,39 +47,46 @@
         <i id="two-arrows-down" class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <header class="user-header">
-      <div class="avatar-container">
-        <img src="./images/model.png">
-      </div>
-      <br>
-      <div class="name-container">
-        <h2 class="user-name"><span class="bold">Roberto</span> Cervantes</h2>
-      </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form action="/tweets" method="POST">
-          <label for="tweet-text">What are you humming about?</label>
-          <div id="alert" >
-            <i class="fa-solid fa-triangle-exclamation"></i>
-            <span></span>
-          </div>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div id="tweet-chars">
-            <button id="tweet" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweets-timeline"></section>
-      <div id="write-new-tweet">
-        <span>New Tweet</span>
-      </div>
-    </main>
+    <div class="bottom-section">
+      <header class="user-header">
+        <div class="avatar-container">
+          <img src="./images/viking.gif">
+        </div>
+        <br>
+        <div class="name-container">
+          <h2 class="user-name"><span class="bold">Roberto</span> Cervantes</h2>
+        </div>
+      </header>
+  
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form action="/tweets" method="POST">
+            <label for="tweet-text">What are you humming about?</label>
+            <div id="alert" >
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span></span>
+            </div>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div id="tweet-chars">
+              <button id="tweet" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="tweets-timeline"></section>
+        <div id="write-new-tweet">
+          <span>New Tweet</span>
+        </div>
+      </main>
+    </div>
+    
     <script src="./scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
   </body>
+  <footer>
+    <a href="https://www.flaticon.com/free-animated-icons/people" title="people animated icons">People animated icons created by Freepik - Flaticon</a>
+  </footer>
 </html>

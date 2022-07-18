@@ -9,6 +9,8 @@
   padding-top:10vmax ;
   background-image: url(../images/dark-dot.png);
   position: static;
+  flex-wrap: wrap;
+  
 }
 
 .avatar-container{
@@ -24,5 +26,16 @@
   color: white;
   margin-top: 0%;
   font-weight: 200;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 1024px){
+  .user-header{
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 60px;
+    padding-top: 0;
+    height: 300px;
+  }
 }
 

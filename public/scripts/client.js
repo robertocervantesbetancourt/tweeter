@@ -121,6 +121,8 @@ $(newTweetContainer).hide();
 const navbar = document.querySelector('nav');
 $(document.querySelector('#write-new-tweet')).hide();
 
+const mediaQuery = window.matchMedia('(min-width: 1024px)');
+
 $(document).scroll(function(){
   if($(this).scrollTop() > 139){
     $(document.querySelector('nav')).css("background","rgba(29, 54, 87, 1)")
@@ -131,6 +133,9 @@ $(document).scroll(function(){
     $(document.querySelector('#two-arrows-down')).css("color","rgba(230, 57, 70, 1)")
     $(document.querySelector('#write-new-tweet')).hide()
     $(document.querySelector('#nav-right')).show()
+    if(mediaQuery.matches){
+      $(document.querySelector('nav')).css("background","rgba(29, 54, 87, 1)")
+    }
   }
 })
 
@@ -141,5 +146,4 @@ $(document.querySelector('#write-new-tweet span')).on('click', function() {
   } else {
     $(newTweetContainer).toggle("slow", 'swing');
   }
-
 })

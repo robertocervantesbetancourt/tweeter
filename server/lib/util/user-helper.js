@@ -28,8 +28,7 @@ module.exports = {
     }
    
     const avatars = {
-    
-      Female: ["https://i.imgur.com/nlhLi3I.png","https://i.imgur.com/z5LNkkB.png","https://i.imgur.com/v0JXau2.png","https://i.imgur.com/lRUnDgU.png", "https://i.imgur.com/3GvwNBf.png"],
+      Female: ["https://www.flaticon.com/free-sticker/piece-of-cake_4524488?related_id=4524488","https://www.flaticon.com/free-sticker/onigiri_4524579?related_id=4524579","https://www.flaticon.com/free-sticker/french-fries_4524501?related_id=4524501", "https://i.imgur.com/nlhLi3I.png","https://i.imgur.com/z5LNkkB.png","https://i.imgur.com/v0JXau2.png","https://i.imgur.com/lRUnDgU.png", "https://i.imgur.com/3GvwNBf.png"],
       Male: ["https://i.imgur.com/73hZDYK.png","https://i.imgur.com/5fUVPRP.png","https://i.imgur.com/DVpDmdR.png","https://i.imgur.com/2WZtOD6.png", "https://i.imgur.com/ilT4JDe.png"]
     
     }
