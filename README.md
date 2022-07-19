@@ -42,3 +42,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 4. Enjoy!
 
+
+
+## Main avatar
+
+<a href="https://www.flaticon.com/free-animated-icons/people" title="people animated icons">People animated icons created by Freepik - Flaticon</a>

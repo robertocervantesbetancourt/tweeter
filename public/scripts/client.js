@@ -139,7 +139,7 @@ $(document).scroll(function(){
   }
 })
 
-
+//open compose tweet box when clicking on button
 $(document.querySelector('#write-new-tweet span')).on('click', function() {
   $(window).scrollTop(0);
   if($(newTweetContainer).is(':visible')){
