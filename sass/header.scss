@@ -1,35 +1,36 @@
-.user-header {
-  background-color: #1d3557;
+@use 'base';
+
+.user-header{
+  background-color: base.$primary-color;
   height: 400px;
   width: 100%;
-  display: flex;
-  justify-content: center;
+  @include base.vertical-align;
   align-items: center;
   flex-direction: column;
-  padding-top: 10vmax;
+  padding-top:10vmax ;
   background-image: url(../images/dark-dot.png);
   position: static;
   flex-wrap: wrap;
+  
 }
 
-.avatar-container {
-  display: flex;
-  justify-content: center;
+.avatar-container{
+  @include base.vertical-align;
 }
 
-.avatar-container img {
+.avatar-container img{
   width: 25%;
 }
 
-.user-name {
+.user-name{
   color: white;
   margin-top: 0%;
   font-weight: 200;
   margin: 0 auto;
 }
 
-@media only screen and (min-width: 1024px) {
-  .user-header {
+@media only screen and (min-width: 1024px){
+  .user-header{
     margin-left: 3%;
     margin-right: 3%;
     margin-top: 60px;
@@ -37,3 +38,4 @@
     height: 300px;
   }
 }
+

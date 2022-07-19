@@ -1,15 +1,17 @@
-article {
+@use 'base';
+
+article{
   margin-top: 60px;
   border: 4px solid;
   padding: 15px;
   width: 100%;
 }
 
-article:hover {
-  box-shadow: 10px 10px #457b9d;
+article:hover{
+  box-shadow: 10px 10px base.$secondary-color;
 }
 
-.tweet-header {
+.tweet-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,17 +19,17 @@ article:hover {
   margin-right: 3px;
 }
 
-.tweet-header img {
+.tweet-header img{
   width: 80px;
   margin-right: 5px;
 }
 
-.user-handle {
+.user-handle{
   margin-left: auto;
-  color: #457b9d;
+  color: base.$secondary-color;
 }
 
-.tweet-footer {
+.tweet-footer{
   padding-top: 5px;
   padding-left: 5px;
   padding-right: 5px;
@@ -37,16 +39,16 @@ article:hover {
   font-size: 14px;
 }
 
-.tweet-footer span {
+.tweet-footer span{
   margin-right: auto;
 }
 
-.tweet-footer i {
-  color: #457b9d;
+.tweet-footer i{
+  color: base.$secondary-color;
   margin-left: 3px;
   margin-right: 3px;
 }
 
-.tweet-footer i:hover {
-  color: #e63946;
+.tweet-footer i:hover{
+  color: base.$accent-color;
 }

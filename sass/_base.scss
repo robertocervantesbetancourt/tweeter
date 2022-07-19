@@ -1,0 +1,10 @@
+$primary-color: #1d3557;
+$secondary-color: #457b9d;
+$accent-color: #e63946;
+$fn-bungee: "Bungee", sans-serif;
+$fn-source-sans: 'Source Sans Pro', sans-serif;
+
+@mixin vertical-align {
+  display: flex;
+  justify-content: center;
+}

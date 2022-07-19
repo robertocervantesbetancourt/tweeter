@@ -11,35 +11,29 @@ nav {
   position: fixed;
   top: 0;
 }
-
-#logo {
+nav #logo {
   font-family: "Bungee", sans-serif;
   font-size: 30px;
 }
-
-.bold {
-  font-weight: 600;
-}
-
-#nav-right {
+nav #nav-right {
   display: flex;
   align-items: center;
   flex-direction: column;
   cursor: pointer;
 }
-
-#two-arrows-down {
+nav #nav-right .no-lower-margin {
+  margin-bottom: 0px;
+}
+nav #nav-right .no-lower-margin .bold {
+  font-weight: 600;
+}
+nav #nav-right #two-arrows-down {
   color: #e63946;
 }
 
-.no-lower-margin{
-  margin-bottom: 0px;
-}
-
-@media only screen and (min-width: 1024px){
-  nav{
+@media only screen and (min-width: 1024px) {
+  nav {
     background-color: #1d3557;
     position: relative;
-    
   }
 }

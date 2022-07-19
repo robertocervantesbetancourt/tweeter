@@ -1,15 +1,17 @@
-.new-tweet {
+@use 'base';
+
+.new-tweet{
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-form {
+form{
   display: flex;
   flex-direction: column;
 }
 
-#tweet-text {
+#tweet-text{
   background-color: #f9f9f9;
   border-bottom: 4px solid;
   border-left: 0px;
@@ -19,33 +21,33 @@ form {
   margin-bottom: 8px;
 }
 
-#tweet-text:focus {
+#tweet-text:focus{
   outline: none !important;
 }
 
-.counter {
-  font-family: "Bungee", sans-serif;
+.counter{
+  font-family: base.$fn-bungee;
 }
 
-#tweet-chars {
+#tweet-chars{
   display: flex;
   justify-content: space-between;
 }
 
-#tweet {
-  background-color: #e63946;
-  font-family: "Bungee", sans-serif;
+#tweet{
+  background-color: base.$accent-color;
+  font-family: base.$fn-bungee;;
   font-size: 18px;
   color: white;
 }
 
-#alert {
+#alert{
   margin-top: 5px;
-  color: #e63946;
+  color: base.$accent-color;
   font-size: 14px;
 }
 
-#write-new-tweet {
+#write-new-tweet{
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -56,21 +58,23 @@ form {
   bottom: 0;
   z-index: 99;
   color: white;
-  background: #e63946;
+  background: base.$accent-color;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   display: flex;
-  font-family: "Bungee", sans-serif;
+  font-family: base.$fn-bungee;;
+
 }
 
-#write-new-tweet span {
+#write-new-tweet span{
   padding-top: 15px;
   color: #f1faee;
   text-align: center;
   cursor: pointer;
+
 }
 
-@media only screen and (min-width: 1024px) {
-  .new-tweet {
+@media only screen and (min-width: 1024px){
+  .new-tweet{
     margin-top: 30px;
   }
 }

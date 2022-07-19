@@ -3,70 +3,65 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
- 
- 
- html {
-   box-sizing: border-box;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  /*
-  * Global layout stuff
-  */
-  
-  body {
-    color: #545149;
-    background-color: #f1faee;
-    font-size: 24px;
-    font-family: 'Source Sans Pro', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
-  }
+html {
+  box-sizing: border-box;
+}
 
-  .bottom-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container{
-    width: 90%;
-    /* margin-left: 15px; */
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    font-size: 18px;
-    justify-content: center;
-  }
-  
-  .tweets-timeline{
-    width: 100%;
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-  footer{
-    font-size: 12px;
-    padding-top: 150px;
-    bottom: 0;
+/*
+* Global layout stuff
+*/
+body {
+  color: #545149;
+  background-color: #f1faee;
+  font-size: 24px;
+  font-family: "Source Sans Pro", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  /* margin-left: 15px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  justify-content: center;
+}
+
+.tweets-timeline {
+  width: 100%;
+}
+
+footer {
+  font-size: 12px;
+  padding-top: 150px;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 1024px) {
+  .bottom-section {
+    flex-direction: row;
+    align-items: flex-start;
   }
-  
-  @media only screen and (min-width: 1024px){
-
-    .bottom-section{
-      flex-direction: row;
-      align-items: flex-start;
-    }
-
-    .container{
-      flex: 66.7%;
-      padding-left: 8%;
-      padding-right: 8%;
-    }
-
-    .user-header{
-      flex: 33.3%;
-    }
-  } 
+  .container {
+    flex: 66.7%;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .user-header {
+    flex: 33.3%;
+  }
+}
